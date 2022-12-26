@@ -13,5 +13,11 @@ public class Main {
 
         System.out.println(""+ladaGranta+'\n'+audiA8+'\n'+bmwZ8+'\n'+kiaSportage+'\n'+hyundaiAvante);
 
+        Car ogogo =new Car(null,"Koenigsegg", 0, "", 10, "");
+        System.out.println(ogogo);
+        Car ogogo1=new Car();
+        ogogo1.setBrand("Ferarri");
+        ogogo1.setYear(2023);
+        System.out.println(ogogo1);
     }
 }
