@@ -19,5 +19,8 @@ public class Main {
         ogogo1.setBrand("Ferarri");
         ogogo1.setYear(2023);
         System.out.println(ogogo1);
+        Car bmwZ8Double = new Car(bmwZ8);
+        bmwZ8Double.setYear(2030);
+        System.out.println(bmwZ8Double);
     }
 }

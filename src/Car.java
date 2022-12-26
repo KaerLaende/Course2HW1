@@ -10,9 +10,6 @@ public class Car {
     }
 
     public void setBrand(String brand) {
-        if (brand==null){
-            brand="default";
-        }
         this.brand = brand;
     }
 
@@ -61,17 +58,13 @@ public class Car {
 
     public Car(String brand, String model, double engineVolume, String color, int year, String country) {
 
-        if (model==null){
-            model="default";
-        }
+        this.brand=brand;
         this.model = model;
         if (engineVolume<=0){
             engineVolume=1.5;
         }
         this.engineVolume = engineVolume;
-        if (color==null){
-            color="белый";
-        }
+
         this.color = color;
         if (year<=1940){
             year=2000;
@@ -92,13 +85,13 @@ public class Car {
         this.year = year;
     }
 
-    public Car(String brand, String model, String country) {
+    public Car(String b, String m, String c) {
         engineVolume=1.5;
         color="белый";
         year=2000;
-        this.brand = brand;
-        this.model = model;
-        this.country = country;
+        brand = b;
+        model = m;
+        country = c;
     }
 
     public Car() {
@@ -121,7 +114,14 @@ public class Car {
             color="белый";
         }
     }
-
+    Car(Car ob){
+        brand=ob.brand;
+        engineVolume=ob.engineVolume;
+        color=ob.color;
+        year=ob.year;
+        model = ob.model;
+        country = ob.country;
+    }
     @Override
     public String toString() {
         return brand+" "+ model+" "+year+" год выпуска, сборка в стране "+country+", "+color+", объем двигателя — "+engineVolume+ " л.";
